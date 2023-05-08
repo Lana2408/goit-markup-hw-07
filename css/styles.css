@@ -58,7 +58,7 @@ img {
 
 .container {
     /*  Phone styles*/
-    min-width: 328px;
+    min-width: 320px;
     max-width: 428px;
     margin-left: auto;
     margin-right: auto;
@@ -622,12 +622,25 @@ img {
     text-transform: capitalize;
 }
 
+.customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 72px;
+    justify-content: center;
+}
+
+.customers-list-element {
+    width: 190px;
+    height: 88px;
+}
+
 .customers-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 190px;
-    height: 88px;
+    width: 100%;
+    height: 100%;
     border: solid 1px var(--grey-color);
     border-radius: 4px;
     color: var(--grey-color);
@@ -637,40 +650,22 @@ img {
 
 
 
-.customers-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 72px;
-    margin: auto;
-    justify-content: center;
-}
-
-.customers-list-element {
-    max-width: calc((100%-16px)/2);
-}
-
-
-
 @media screen and (min-width:768px) {
-    .customers-link {
-        width: 168px;
-    }
 
     .customers-list {
         column-gap: 24px;
     }
 
     .customers-list-element {
-        max-width: calc((100%-48px)/3);
+        width: 168px;
     }
 }
 
-@media screen and (min-width:1158px) {
+/* @media screen and (min-width:1158px) {
     .customers-list-element {
         max-width: calc((100%-72px)/4);
     }
-}
+} */
 
 
 
@@ -1098,9 +1093,8 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 392px;
+    width: 100%;
     padding: 72px 16px 24px 16px;
-
     background-color: var(--modal-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -1109,6 +1103,13 @@ img {
     transition: transform var(--transition-property), opacity var(--transition-property);
 
 }
+
+@media screen and (min-width:428px) {
+    .modal {
+        max-width: 392px;
+    }
+}
+
 
 @media screen and (min-width:768px) {
     .modal {
@@ -1259,10 +1260,10 @@ img {
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    background-image: url(../images/icon.svg/#icon-facebook);
-    background-repeat: no-repeat;
+    /* background-image: url(../images/icon.svg/#icon-facebook); */
+    /* background-repeat: no-repeat;
     background-position: center;
-    background-size: 0;
+    background-size: 0; */
     transition: background-color var(--transition-property), border var(--transition-property);
 
 
@@ -1429,7 +1430,8 @@ img {
 
 .mobile-soclist {
     display: flex;
-    gap: 56px;
+    flex-wrap: wrap;
+    gap: 15px 56px;
 }
 
 .mobile-socmedia-link {
